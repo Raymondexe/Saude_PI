@@ -5,12 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-Estar 360 - Indica</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navegacao = document.querySelector('.Navegacao');
+
+            menuToggle.addEventListener('click', () => {
+                navegacao.classList.toggle('ativo');
+            });
+
+            document.querySelectorAll('.Navegacao a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navegacao.classList.remove('ativo');
+                });
+            });
+        });
+    </script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="icon/icon_BemEstar360.ico">
 
     <!-- CSS externo -->
     <link rel="stylesheet" href="Css/estilo.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -23,8 +42,13 @@
     <!-- Header -->
     <header class="TopoSite">
         <div class="Logo">
-            <img class="ImgLogo" src="Img/logo_BemEstar360.png" alt="Logo Bem Estar 360">
+            <img class="ImgLogo" src="Img/bemEstar360.png" alt="Logo Bem Estar 360">
         </div>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
         <nav class="Navegacao">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -72,8 +96,34 @@
         </div>
     </section>
 
+    <section class="ContainerBoas">
+        <div class="TextoBoas">
+            <h1>Bem-vindo ao Bem-Estar 360!</h1>
+            <p> O Bem-Estar 360 foi desenvolvido para oferecer um acompanhamento completo da sua saúde. Aqui, você
+                poderá
+                registrar diariamente seus níveis de glicemia, pressão arterial, batimentos cardíacos e temperatura,
+                permitindo um monitoramento detalhado do seu estado físico.</p>
+            <p> Além do controle diário, nosso portal oferece conteúdos educativos sobre saúde e bem-estar, ajudando
+                você
+                a compreender melhor seu corpo e adotar hábitos mais saudáveis.</p>
+            <p> Recomendamos realizar os registros de forma consistente para que os profissionais de saúde possam
+                analisar seu histórico com precisão, proporcionando orientações mais assertivas e personalizadas.</p>
+        </div>
+    </section>
+
+
+    <section class="ContainerControle">
+        <div class="Controle">
+            <h2>Registre seus dados de saúde</h2>
+            <p>Para manter seu acompanhamento atualizado, clique nos cards abaixo e registre suas medições de pressão
+                arterial, glicemia, batimentos cardíacos e temperatura. O registro diário ajuda você e os profissionais
+                de saúde a monitorarem seu bem-estar com mais precisão.</p>
+        </div>
+    </section>
+
     <!-- Cards -->
     <section class="grid-cards">
+
         <div class="card">
             <img src="./Img/pressao.jpg" alt="Ícone de Pressão" loading="lazy">
             <div class="card-content">
@@ -84,7 +134,7 @@
         </div>
 
         <div class="card">
-            <img src="./Img/glicemia.jpg"  alt="Ícone de Glicemia" loading="lazy">
+            <img src="./Img/glicemia.jpg" alt="Ícone de Glicemia" loading="lazy">
             <div class="card-content">
                 <h2>Glicemia</h2>
                 <p>Curiosidades sobre Glicemia</p>
@@ -111,9 +161,151 @@
         </div>
     </section>
 
+    <br><br>
+
+  
+
+    <section class="ContainerNoticias">
+        <div class="card-wrapper">
+            <ul class="card-list">
+                <li class="card-item">
+                    <a href="#" class="card-link">
+                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                    </a>
+                    <p class="badge paragrafoS">#Sus</p>
+                    <h2 class="card-title">SUS garante atendimento de qualidade a todos os brasileiros</h2>
+                    <p>O Sistema Único de Saúde (SUS) continua oferecendo atendimento gratuito, promovendo prevenção,
+                        tratamentos e acompanhamento em diversas áreas da saúde, reforçando seu papel essencial na vida
+                        da população.
+                    </p>
+                    <button class="card-button material-symbols-outlined">
+                        arrow_forward
+                    </button>
+                </li>
+
+                <li class="card-item">
+                    <a href="#" class="card-link">
+                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                    </a>
+                    <p class="badge paragrafoD">#Diabete</p>
+                    <h2 class="card-title">Diabetes exige acompanhamento e cuidados contínuos</h2>
+                    <p>O diabetes é uma doença crônica que exige atenção diária à alimentação, atividade física e
+                        controle médico. O diagnóstico precoce é essencial para evitar complicações graves.
+                    </p>
+                    <button class="card-button material-symbols-outlined">
+                        arrow_forward
+                    </button>
+                </li>
+
+                <li class="card-item">
+                    <a href="#" class="card-link">
+                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                    </a>
+                    <p class="badge paragrafoSS">#Saude Sexual</p>
+                    <h2 class="card-title">Saúde sexual: importância da prevenção e bem-estar</h2>
+                    <p>Especialistas alertam sobre a necessidade de cuidados com a saúde sexual, que envolve bem-estar
+                        físico, emocional e social, além da prevenção de doenças e promoção de relacionamentos
+                        saudáveis.
+                    </p>
+                    <button class="card-button material-symbols-outlined">
+                        arrow_forward
+                    </button>
+                </li>
+
+                <li class="card-item">
+                    <a href="#" class="card-link">
+                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                    </a>
+                    <p class="badge paragrafoSM">#Saúde Mental</p>
+                    <h2 class="card-title">Saúde mental recebe atenção crescente no Brasil</h2>
+                    <p>O cuidado com a saúde mental é cada vez mais valorizado, envolvendo estratégias de prevenção,
+                        tratamento de transtornos psicológicos e promoção do equilíbrio emocional para uma melhor
+                        qualidade de vida.
+                    </p>
+                    <button class="card-button material-symbols-outlined">
+                        arrow_forward
+                    </button>
+                </li>
+
+                <li class="card-item">
+                    <a href="#" class="card-link">
+                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                    </a>
+                    <p class="badge paragrafoG">#Glaucoma</p>
+                    <h2 class="card-title">Glaucoma: doença silenciosa que ameaça a visão</h2>
+                    <p>O glaucoma, caracterizado pelo aumento da pressão ocular, pode levar à perda da visão se não for
+                        diagnosticado precocemente. Profissionais recomendam consultas regulares para prevenção
+                    </p>
+                    <button class="card-button material-symbols-outlined">
+                        arrow_forward
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+    <br><br>
+
+    <section class="ContainerControle">
+
+        <div class="Controle">
+            <h2>Unidades Básicas de Saúde que atendemos</h1>
+        </div>
+    </section>
+
+    <br><br>
+
+    <section class="ContainerControle">
+
+        <div class="Controle">
+            <h2>Localização</h1>
+        </div>
+    </section>
+
+
+
+
     <!-- Rodapé -->
-    <footer class="Fim text-center py-4">
-        <p>&copy; 2025 — Saúde 360. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <div class="footerContainer">
+            <!-- Logo e nome -->
+            <div class="footerBrand">
+                <img src="Img/logo_BemEstar360.png" alt="Bem Estar 360" class="footerLogo">
+                <span>Bem-Estar 360</span>
+            </div>
+
+            <div class="footerLinks">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./monitoramento.html">Monitoramento</a></li>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="footerContato">
+                <h4>Contato</h4>
+                <p>Email: contato@bemestar360.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+                <div class="footerSocials">
+                    <a href="#"><img src="./Img/face_icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="./Img/insta_icon.webp" alt="Instagram"></a>
+                    <a href="#"><img src="./Img/X_icon.svg.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footerBottom">
+            <p>&copy; 2025 Bem-Estar 360. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
