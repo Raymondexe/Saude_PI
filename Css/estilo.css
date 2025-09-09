@@ -5,6 +5,16 @@ body {
     background-color: #eef4ff;
 }
 
+body.high-contrast {
+  background: #000;
+  color: #FFD700;
+}
+
+body.high-contrast a {
+  color: #FFD700;
+  font-weight: bold;
+}
+
 /* ==== Header ==== */
 .TopoSite {
     background: white;
@@ -29,6 +39,7 @@ body {
     gap: 30px;
     margin: 0;
     padding: 0;
+    align-items: center; 
 }
 
 .Navegacao li a {
@@ -56,6 +67,254 @@ body {
     z-index: 20;
 }
 
+
+.config-menu {
+    position: relative;
+}
+
+.config-menu button {
+    background: none;
+    border: none;
+    font-size: 16px; /* igual ao tamanho dos links */
+    cursor: pointer;
+    padding: 10px;
+    color: #fff; /* ou #000 dependendo do fundo */
+}
+
+.config-menu button:hover {
+    color: #2185f8;
+}
+
+/* Dropdown */
+.config-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    padding: 8px 0;
+    flex-direction: column;
+    z-index: 1001;
+}
+
+/* Botões do dropdown */
+.config-menu .dropdown button {
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #000;
+    transition: background 0.2s;
+}
+
+.config-menu .dropdown button:hover {
+    background: #eef4ff;
+    color: #2185f8;
+    font-weight: bold;
+}
+
+
+/* ==== Menu de Configurações ==== */
+.config-menu {
+    position: relative;
+}
+
+.config-menu button {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 10px;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.config-menu button:hover {
+    color: #2185f8;
+}
+
+/* Dropdown */
+.config-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    padding: 8px 0;
+    flex-direction: column;
+    animation: fadeDown 0.2s ease-in-out;
+    z-index: 1001;
+}
+
+.config-menu .dropdown button {
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #000000;
+    transition: background 0.2s;
+}
+
+.config-menu .dropdown button:hover {
+    background: #eef4ff;
+    color: #2185f8;
+    font-weight: bold;
+}
+
+/* Animação suave para o dropdown */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==== Dark Mode ==== */
+body.dark-mode {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+/* Cards padrão */
+.grid-cards .card h2 {
+    color: #000; 
+}
+.grid-cards .card p,
+.grid-cards .card a {
+    color: #333; 
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee; 
+}
+
+body.dark-mode .grid-cards .card {
+    background-color: #1e1e1e; 
+    border: 2px solid #333;     
+}
+
+body.dark-mode .grid-cards .card h2 {
+    color: #fff; 
+}
+
+body.dark-mode .grid-cards .card p,
+body.dark-mode .grid-cards .card a {
+    color: #ccc; 
+}
+
+body, .grid-cards .card {
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .TopoSite {
+    background: #1e1e1e;
+    box-shadow: none;
+}
+
+body.dark-mode .Navegacao li a {
+    color: #f5f5f5;
+}
+
+body.dark-mode .config-menu button {
+    color: #f5f5f5;
+}
+
+body.dark-mode .config-menu .dropdown {
+    background: #1e1e1e;
+}
+
+body.dark-mode .config-menu .dropdown button {
+    color: #f5f5f5;
+}
+
+body.dark-mode .config-menu .dropdown button:hover {
+    background: #2a2a2a;
+    color: #2185f8;
+}
+
+body.dark-mode .ContainerNoticias {
+    background-color: #121212; 
+    color: #eee;               
+}
+
+body.dark-mode .ContainerNoticias .card-item {
+    background-color: #1e1e1e; 
+    border: 1px solid #333;    
+}
+
+body.dark-mode .ContainerNoticias .card-item h2.card-title {
+    color: #fff; 
+}
+
+body.dark-mode .ContainerNoticias .card-item p,
+body.dark-mode .ContainerNoticias .card-item .badge {
+    color: #ccc; 
+}
+
+body.dark-mode .ContainerNoticias .card-button {
+    color: #eee; 
+}
+
+/* Transição suave */
+body.dark-mode .ContainerNoticias,
+body.dark-mode .ContainerNoticias .card-item {
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .paragrafoS { 
+    background-color: rgba(135, 233, 159, 0.6);
+}
+
+.accessibility-dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    min-width: 200px;
+    padding: 8px 0;
+    z-index: 1002;
+}
+
+.accessibility-dropdown button {
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #000;
+}
+
+.accessibility-dropdown button:hover {
+    background: #eef4ff;
+    color: #2185f8;
+    font-weight: bold;
+}
+
+
 /* ==== START Carrossel ==== */
 .Carrossel img {
     max-height: 400px;
@@ -66,12 +325,7 @@ body {
 
 
 
-
-
-
 /* ==== START Boas-Vindas ==== */
-
-/* ===== Estilos Gerais ===== */
 
 
 /* ===== Container da Seção ===== */
@@ -222,7 +476,6 @@ body {
 
 
 /* ===== Container de Notícias ===== */
-/* Container geral */
 .ContainerNoticias {
     padding: 20px;
     background-color: #f9f9f9;
@@ -230,13 +483,13 @@ body {
 
 /* Wrapper dos cards */
 .card-wrapper {
-    overflow-x: auto; /* rolagem horizontal se necessário */
+    overflow-x: auto; 
 }
 
 /* Lista de cards */
 .card-list {
     display: flex;
-    gap: 20px; /* espaço entre os cards */
+    gap: 20px; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -249,7 +502,7 @@ body {
     flex: 0 0 280px;
     background-color: #fff;
     border-radius: 15px;
-    border: 1px solid #ddd; /* borda padrão */
+    border: 1px solid #ddd; 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     padding: 15px;
     display: flex;
@@ -263,9 +516,10 @@ body {
 .card-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-    border: 2px solid #007bff; /* contorno azul ao passar o mouse */
+    border: 2px solid #007bff; 
 }
-/* Imagem do card */
+
+
 .card-image {
     width: 100%;
     height: 160px;
@@ -273,14 +527,14 @@ body {
     border-radius: 10px;
 }
 
-/* Título do card */
+
 .card-title {
     font-size: 18px;
     margin: 10px 0;
     text-align: center;
 }
 
-/* Badge do card */
+
 .badge {
     background-color: #007bff;
     color: #ffffff;
@@ -305,11 +559,6 @@ body {
 .paragrafoSM{
     background-color: rgb(117, 91, 236);
 }
-
-.paragrafoG {
-    background-color: red;
-}
-
 
 
 /* Botão do card */
@@ -337,12 +586,9 @@ body {
     margin-top: 8px;
 }
 
-/* ==== START Slider ==== */
 
 
-
-
-/* ==== END Slider ==== */
+/* BEGIN LOGIN PAGE*/
 
 
 
@@ -350,6 +596,7 @@ body {
 
 
 
+/* END LOGIN PAGE*/
 
 
 

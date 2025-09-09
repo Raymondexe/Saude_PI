@@ -42,7 +42,7 @@
     <!-- Header -->
     <header class="TopoSite">
         <div class="Logo">
-            <img class="ImgLogo" src="Img/bemEstar360.png" alt="Logo Bem Estar 360">
+            <img class="ImgLogo" src="Img/BemEstar360.webp" alt="Logo Bem Estar 360">
         </div>
 
         <button class="menu-toggle" aria-label="Abrir menu">
@@ -51,16 +51,30 @@
 
         <nav class="Navegacao">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./monitoramento.html">Monitoramento</a></li>
-                <li><a href="#">Histórico</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contatos</a></li>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="./index.html" data-lang="home">Home</a></li>
+                <li><a href="./monitoramento.html" data-lang="monitoring">Monitoramento</a></li>
+                <li><a href="#" data-lang="history">Histórico</a></li>
+                <li><a href="#" data-lang="services">Serviços</a></li>
+                <li><a href="#" data-lang="about">Quem somos</a></li>
+                <li><a href="./login.html">Login</a>
+
+                <!-- Menu Configurações -->
+                <li class="config-menu">
+                    <button id="config-btn">⚙️</button>
+                    <div class="dropdown">
+                        <button id="toggle-theme">🌙 Modo Escuro</button>
+                        <button id="change-lang">🌎 Trocar Idioma</button>
+                        <button id="accessibility">♿ Acessibilidade</button>
+                    </div>
+                </li>
             </ul>
+
         </nav>
     </header>
+
+
+
+    <script src="script.js"></script>
 
     <!-- Carrossel -->
     <section class="Carrossel my-4">
@@ -163,14 +177,14 @@
 
     <br><br>
 
-  
+
 
     <section class="ContainerNoticias">
         <div class="card-wrapper">
             <ul class="card-list">
                 <li class="card-item">
                     <a href="#" class="card-link">
-                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                        <img src="./Img/sus.png" alt="" class="card-image">
                     </a>
                     <p class="badge paragrafoS">#Sus</p>
                     <h2 class="card-title">SUS garante atendimento de qualidade a todos os brasileiros</h2>
@@ -185,7 +199,7 @@
 
                 <li class="card-item">
                     <a href="#" class="card-link">
-                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                        <img src="./Img/diabete.webp" alt="" class="card-image">
                     </a>
                     <p class="badge paragrafoD">#Diabete</p>
                     <h2 class="card-title">Diabetes exige acompanhamento e cuidados contínuos</h2>
@@ -199,7 +213,7 @@
 
                 <li class="card-item">
                     <a href="#" class="card-link">
-                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                        <img src="./Img/saudeSexual.webp" alt="" class="card-image">
                     </a>
                     <p class="badge paragrafoSS">#Saude Sexual</p>
                     <h2 class="card-title">Saúde sexual: importância da prevenção e bem-estar</h2>
@@ -214,7 +228,7 @@
 
                 <li class="card-item">
                     <a href="#" class="card-link">
-                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                        <img src="./Img/saudeMental.jpg" alt="" class="card-image">
                     </a>
                     <p class="badge paragrafoSM">#Saúde Mental</p>
                     <h2 class="card-title">Saúde mental recebe atenção crescente no Brasil</h2>
@@ -229,7 +243,7 @@
 
                 <li class="card-item">
                     <a href="#" class="card-link">
-                        <img src="./Img/porsche.webp" alt="" class="card-image">
+                        <img src="./Img/glaucoma.jpg" alt="" class="card-image">
                     </a>
                     <p class="badge paragrafoG">#Glaucoma</p>
                     <h2 class="card-title">Glaucoma: doença silenciosa que ameaça a visão</h2>
@@ -245,10 +259,6 @@
         </div>
     </section>
 
-
-
-
-
     <br><br>
 
     <section class="ContainerControle">
@@ -260,12 +270,18 @@
 
     <br><br>
 
+
+    <!--
+    
     <section class="ContainerControle">
 
         <div class="Controle">
             <h2>Localização</h1>
         </div>
     </section>
+    
+    -->
+
 
 
 
