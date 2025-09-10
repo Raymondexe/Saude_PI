@@ -6,13 +6,13 @@ body {
 }
 
 body.high-contrast {
-  background: #000;
-  color: #FFD700;
+    background: #000;
+    color: #FFD700;
 }
 
 body.high-contrast a {
-  color: #FFD700;
-  font-weight: bold;
+    color: #FFD700;
+    font-weight: bold;
 }
 
 /* ==== Header ==== */
@@ -39,7 +39,7 @@ body.high-contrast a {
     gap: 30px;
     margin: 0;
     padding: 0;
-    align-items: center; 
+    align-items: center;
 }
 
 .Navegacao li a {
@@ -47,15 +47,15 @@ body.high-contrast a {
     color: #000000;
     font-weight: bold;
     font-size: 16px;
-    padding: 10px;
+    padding: 5px;
     transition: 0.3s;
 }
+
 
 .Navegacao li a:hover {
     color: #2185f8;
     border-bottom: 2px solid #2185f8;
 }
-
 
 .menu-toggle {
     background: none;
@@ -75,10 +75,12 @@ body.high-contrast a {
 .config-menu button {
     background: none;
     border: none;
-    font-size: 16px; /* igual ao tamanho dos links */
+    font-size: 16px;
+    /* igual ao tamanho dos links */
     cursor: pointer;
     padding: 10px;
-    color: #fff; /* ou #000 dependendo do fundo */
+    color: #fff;
+    /* ou #000 dependendo do fundo */
 }
 
 .config-menu button:hover {
@@ -179,6 +181,7 @@ body.high-contrast a {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -193,34 +196,36 @@ body.dark-mode {
 
 /* Cards padrão */
 .grid-cards .card h2 {
-    color: #000; 
+    color: #000;
 }
+
 .grid-cards .card p,
 .grid-cards .card a {
-    color: #333; 
+    color: #333;
 }
 
 /* Modo escuro */
 body.dark-mode {
     background-color: #121212;
-    color: #eee; 
+    color: #eee;
 }
 
 body.dark-mode .grid-cards .card {
-    background-color: #1e1e1e; 
-    border: 2px solid #333;     
+    background-color: #1e1e1e;
+    border: 2px solid #333;
 }
 
 body.dark-mode .grid-cards .card h2 {
-    color: #fff; 
+    color: #fff;
 }
 
 body.dark-mode .grid-cards .card p,
 body.dark-mode .grid-cards .card a {
-    color: #ccc; 
+    color: #ccc;
 }
 
-body, .grid-cards .card {
+body,
+.grid-cards .card {
     transition: all 0.3s ease;
 }
 
@@ -251,26 +256,26 @@ body.dark-mode .config-menu .dropdown button:hover {
 }
 
 body.dark-mode .ContainerNoticias {
-    background-color: #121212; 
-    color: #eee;               
+    background-color: #121212;
+    color: #eee;
 }
 
 body.dark-mode .ContainerNoticias .card-item {
-    background-color: #1e1e1e; 
-    border: 1px solid #333;    
+    background-color: #1e1e1e;
+    border: 1px solid #333;
 }
 
 body.dark-mode .ContainerNoticias .card-item h2.card-title {
-    color: #fff; 
+    color: #fff;
 }
 
 body.dark-mode .ContainerNoticias .card-item p,
 body.dark-mode .ContainerNoticias .card-item .badge {
-    color: #ccc; 
+    color: #ccc;
 }
 
 body.dark-mode .ContainerNoticias .card-button {
-    color: #eee; 
+    color: #eee;
 }
 
 /* Transição suave */
@@ -279,40 +284,11 @@ body.dark-mode .ContainerNoticias .card-item {
     transition: all 0.3s ease;
 }
 
-body.dark-mode .paragrafoS { 
+body.dark-mode .paragrafoS {
     background-color: rgba(135, 233, 159, 0.6);
 }
 
-.accessibility-dropdown {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 120%;
-    right: 0;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    min-width: 200px;
-    padding: 8px 0;
-    z-index: 1002;
-}
 
-.accessibility-dropdown button {
-    background: none;
-    border: none;
-    text-align: left;
-    width: 100%;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 15px;
-    color: #000;
-}
-
-.accessibility-dropdown button:hover {
-    background: #eef4ff;
-    color: #2185f8;
-    font-weight: bold;
-}
 
 
 /* ==== START Carrossel ==== */
@@ -472,7 +448,31 @@ body.dark-mode .paragrafoS {
 
 /* ==== END Cards ==== */
 
+/* ===== BEGIN Titulo Container de Notícias ===== */
+.titleNotices h4 {
+    font-size: 1.8rem;          
+    font-weight: 700;            
+    color: #1565c0;              
+    text-transform: uppercase;   
+    letter-spacing: 1px;         
+    margin-bottom: 1rem;         
+    position: relative;          
+}
 
+/* Linha decorativa abaixo do título */
+.titleNotices h4::after {
+    content: "";
+    display: block;
+    width: 60px;                 
+    height: 4px;                 
+    background-color: #1e88e5;   
+    margin-top: 8px;             
+    border-radius: 2px;          
+}
+
+
+
+/* ===== END Titulo Container de Notícias ===== */
 
 
 /* ===== Container de Notícias ===== */
@@ -483,13 +483,13 @@ body.dark-mode .paragrafoS {
 
 /* Wrapper dos cards */
 .card-wrapper {
-    overflow-x: auto; 
+    overflow-x: auto;
 }
 
 /* Lista de cards */
 .card-list {
     display: flex;
-    gap: 20px; 
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -502,21 +502,21 @@ body.dark-mode .paragrafoS {
     flex: 0 0 280px;
     background-color: #fff;
     border-radius: 15px;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     padding: 15px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     margin-top: 5px;
-    
+
 }
 
 
 .card-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-    border: 2px solid #007bff; 
+    border: 2px solid #007bff;
 }
 
 
@@ -556,7 +556,7 @@ body.dark-mode .paragrafoS {
     background-color: rgb(40, 151, 170);
 }
 
-.paragrafoSM{
+.paragrafoSM {
     background-color: rgb(117, 91, 236);
 }
 
@@ -743,4 +743,26 @@ body.dark-mode .paragrafoS {
         }
     }
 
+
+    body.dark-mode .config-menu .dropdown {
+        width: 100%;
+    }
+
+    body.dark-mode .Navegacao {
+        flex-direction: column;
+        background-color: #1e1e1e;
+    }
+
+    body.dark-mode .grid-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    body.dark-mode .grid-cards .card {
+        width: 100%;
+    }
+
+    body.dark-mode .ContainerNoticias {
+        padding: 1rem;
+    }
 }
