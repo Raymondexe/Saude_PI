@@ -109,51 +109,27 @@ body {
     font-weight: bold;
 }
 
-
-
-
 /* ==== Dark Mode ==== */
-body.dark-mode {
-    background: #121212;
-    color: #f5f5f5;
-}
+/* ===== MODO CLARO (PADRÃO) ===== */
 
-/* Cards padrão */
-.grid-cards .card h2 {
-    color: #000; 
-}
-.grid-cards .card p,
-.grid-cards .card a {
-    color: #333; 
-}
 
-/* Modo escuro */
+
+/* ===== MODO ESCURO ===== */
 body.dark-mode {
     background-color: #121212;
-    color: #eee; 
+    color: #eee;
 }
 
-body.dark-mode .grid-cards .card {
-    background-color: #1e1e1e; 
-    border: 2px solid #333;     
+/* ==== LOGIN ==== */
+body.dark-mode .login-box {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode .grid-cards .card h2 {
-    color: #fff; 
-}
-
-body.dark-mode .grid-cards .card p,
-body.dark-mode .grid-cards .card a {
-    color: #ccc; 
-}
-
-body, .grid-cards .card {
-    transition: all 0.3s ease;
-}
-
-body.dark-mode .TopoSite {
-    background: #1e1e1e;
-    box-shadow: none;
+body.dark-mode .login-box h1 {
+    color: #2185f8;
 }
 
 body.dark-mode .Navegacao li a {
@@ -165,49 +141,86 @@ body.dark-mode .config-menu button {
 }
 
 body.dark-mode .config-menu .dropdown {
-    background: #1e1e1e;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 body.dark-mode .config-menu .dropdown button {
-    color: #f5f5f5;
+    color: #ddd;
 }
 
 body.dark-mode .config-menu .dropdown button:hover {
-    background: #2a2a2a;
+    background: #3a3a3a;
     color: #2185f8;
 }
 
-body.dark-mode .ContainerNoticias {
-    background-color: #121212; 
-    color: #eee;               
+body.dark-mode .login-box p,
+body.dark-mode .signup-text {
+    color: #ccc;
 }
 
-body.dark-mode .ContainerNoticias .card-item {
-    background-color: #1e1e1e; 
-    border: 1px solid #333;    
+body.dark-mode .input-group label {
+    color: #ddd;
 }
 
-body.dark-mode .ContainerNoticias .card-item h2.card-title {
-    color: #fff; /* título do card */
+body.dark-mode .input-group input {
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    color: #f5f5f5;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode .ContainerNoticias .card-item p,
-body.dark-mode .ContainerNoticias .card-item .badge {
-    color: #ccc; /* texto e badge */
+body.dark-mode .input-group input:focus {
+    border: 2px solid #2185f8;
+    box-shadow: 0 0 5px rgba(33, 133, 248, 0.5);
 }
 
-body.dark-mode .ContainerNoticias .card-button {
-    color: #eee; /* cor do botão */
+body.dark-mode button[type="submit"] {
+    background-color: #2185f8;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Transição suave */
-body.dark-mode .ContainerNoticias,
-body.dark-mode .ContainerNoticias .card-item {
-    transition: all 0.3s ease;
+body.dark-mode button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
-body.dark-mode .paragrafoS { 
-    background-color: rgba(135, 233, 159, 0.6);
+body.dark-mode .forgot a,
+body.dark-mode .signup-text a {
+    color: #2185f8;
+}
+
+body.dark-mode .forgot a:hover,
+body.dark-mode .signup-text a:hover {
+    color: #66aaff;
+}
+
+body.dark-mode .bordaLogin {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* ==== CARDS ==== */
+body.dark-mode .grid-cards .card {
+    background-color: #1e1e1e;
+    border: 2px solid #333;
+}
+
+body.dark-mode .grid-cards .card h2 {
+    color: #fff;
+}
+
+body.dark-mode .grid-cards .card p,
+body.dark-mode .grid-cards .card a {
+    color: #ccc;
+}
+
+/* ==== TOPO / NAVEGAÇÃO ==== */
+body.dark-mode .TopoSite {
+    background: #1e1e1e;
+    box-shadow: non
 }
 
 
@@ -308,6 +321,24 @@ body.dark-mode .paragrafoS {
     transform: scale(1.1);   
 }
 
+.signup-text {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #333;
+}
+
+.signup-text a {
+    color: #2185f8;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.signup-text a:hover {
+    color: #0056b3;
+    transform: translateY(-2px);
+}
 
 /* ==== Botão de login ==== */
 button[type="submit"] {

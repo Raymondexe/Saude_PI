@@ -44,7 +44,7 @@
     <!-- Header -->
     <header class="TopoSite">
         <div class="Logo">
-            <img class="ImgLogo" src="Img/BemEstar360.webp" alt="Logo Bem Estar 360">
+            <img class="ImgLogo" src="Img/bemEstar.webp" alt="Logo Bem Estar 360">
         </div>
 
         <button class="menu-toggle" aria-label="Abrir menu">
@@ -80,7 +80,7 @@
 
     <section class="registroIndicador">
         <div class="container">
-            <h1>Registre os seus Batimentos Cardíacos</h1>
+            <h1 data-lang="heartTitle">Registre os seus Batimentos Cardíacos</h1>
             <div class="leftImg">
                 <img src="./Img/medindoBatimentosCardiacos.avif" alt="Batimentos Cardíacos">
             </div>
@@ -89,45 +89,46 @@
                 <form id="batimentosForm">
                     <!-- Temporizador -->
                     <div class="input-group timer-group">
-                        <label>Conte seus batimentos por 60 segundos</label>
-                        <p>
+                        <label data-lang="timerLabel">Conte seus batimentos por 60 segundos</label>
+                        <p data-lang="timerHelp">
                             Não sabe contar seus batimentos manualmente?
                             <a href="#video-manual">Clique aqui para ver o vídeo</a>
                         </p>
 
                         <div class="timer-controls">
-                            <button type="button" id="startTimer">Iniciar Contagem</button>
-                            <button type="button" id="resetTimer">Reiniciar Contagem</button>
+                            <button type="button" id="startTimer" data-lang="startTimerBtn">Iniciar Contagem</button>
+                            <button type="button" id="resetTimer" data-lang="resetTimerBtn">Reiniciar Contagem</button>
                             <span id="timerDisplay">60s</span>
                         </div>
                     </div>
 
                     <!-- Batimentos -->
                     <div class="input-group">
-                        <label for="valorBatimentos">Batimentos por Minuto (bpm)</label>
+                        <label for="valorBatimentos" data-lang="bpmLabel">Batimentos por Minuto (bpm)</label>
                         <input type="number" id="valorBatimentos" name="valorBatimentos" placeholder="Ex: 72" min="30"
-                            max="220" required>
+                            max="220" required data-lang-placeholder="bpmPlaceholder">
                     </div>
 
                     <!-- Data e hora -->
                     <div class="input-group">
-                        <label for="data">Data da Medição</label>
+                        <label for="data" data-lang="dateLabel">Data da Medição</label>
                         <input type="date" id="data" name="data" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="hora">Hora da Medição</label>
+                        <label for="hora" data-lang="timeLabel">Hora da Medição</label>
                         <input type="time" id="hora" name="hora" required>
                     </div>
 
                     <!-- Observações -->
                     <div class="input-group">
-                        <label for="observacoes">Observações</label>
+                        <label for="observacoes" data-lang="obsLabel">Observações</label>
                         <textarea id="observacoes" name="observacoes" rows="3"
-                            placeholder="Ex: medi após caminhada, senti cansaço..."></textarea>
+                            placeholder="Ex: medi após caminhada, senti cansaço..."
+                            data-lang-placeholder="obsPlaceholder"></textarea>
                     </div>
 
-                    <button type="submit">Salvar Registro</button>
+                    <button type="submit" data-lang="saveBtn">Salvar Registro</button>
                 </form>
             </div>
         </div>
@@ -136,28 +137,31 @@
 
 
 
+
     <section class="help">
         <div class="help-container">
-            <h2>Como interpretar seus registros de batimentos cardíacos</h2>
-            <p>Veja abaixo como entender os valores de frequência cardíaca registrados:</p>
+            <h2 data-lang="helpTitle">Como interpretar seus registros de batimentos cardíacos</h2>
+            <p data-lang="helpIntro">Veja abaixo como entender os valores de frequência cardíaca registrados:</p>
 
             <div class="help-cards">
                 <div class="help-card green">
-                    <h3>Normal</h3>
-                    <p>Frequência cardíaca: <strong>60-100 bpm</strong></p>
-                    <p>✅ Está dentro do esperado, continue monitorando regularmente.</p>
+                    <h3 data-lang="helpNormalTitle">Normal</h3>
+                    <p data-lang="helpNormalRange">Frequência cardíaca: <strong>60-100 bpm</strong></p>
+                    <p data-lang="helpNormalText">✅ Está dentro do esperado, continue monitorando regularmente.</p>
                 </div>
 
                 <div class="help-card orange">
-                    <h3>Atenção</h3>
-                    <p>Frequência cardíaca: <strong>101-120 bpm</strong></p>
-                    <p>⚠️ Fique atento! Pode indicar estresse, esforço físico recente ou necessidade de avaliação.</p>
+                    <h3 data-lang="helpAttentionTitle">Atenção</h3>
+                    <p data-lang="helpAttentionRange">Frequência cardíaca: <strong>101-120 bpm</strong></p>
+                    <p data-lang="helpAttentionText">⚠️ Fique atento! Pode indicar estresse, esforço físico recente ou
+                        necessidade de avaliação.</p>
                 </div>
 
                 <div class="help-card red">
-                    <h3>Perigo</h3>
-                    <p>Frequência cardíaca: <strong>Menor que 50 bpm ou Maior que 120 bpm</strong></p>
-                    <p>⛔ Procure orientação médica imediatamente!</p>
+                    <h3 data-lang="helpDangerTitle">Perigo</h3>
+                    <p data-lang="helpDangerRange">Frequência cardíaca: <strong>Menor que 50 bpm ou Maior que 120
+                            bpm</strong></p>
+                    <p data-lang="helpDangerText">⛔ Procure orientação médica imediatamente!</p>
                 </div>
             </div>
         </div>
@@ -165,10 +169,11 @@
 
 
 
+
     <section class="teaching">
         <div class="video-container">
             <div class="video-card" id="video-manual">
-            <p>Manualmente</p>
+                <p data-lang="videoManual">Manualmente</p>
                 <iframe src="https://www.youtube.com/embed/x5f_iLpkMqw?si=fzxR7CAiVJVs0eo9" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -176,7 +181,7 @@
             </div>
 
             <div class="video-card">
-                <p>Com aparelho digital de pulso</p>
+                <p data-lang="videoDigital">Com aparelho digital de pulso</p>
                 <iframe src="https://www.youtube.com/embed/rZvxDl8BOOs?si=QDgR38tuakyYVK9Y" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -184,6 +189,7 @@
             </div>
         </div>
     </section>
+
 
 
 
