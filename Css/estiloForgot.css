@@ -52,7 +52,6 @@ body {
     font-size: 1.8rem;
     cursor: pointer;
     display: none;
-    color: var(--cor-primaria);
     z-index: 20;
 }
 
@@ -262,6 +261,15 @@ body.dark-mode .paragrafoS {
   font-size: 14px;
 }
 
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box; /* garante que padding não quebre o layout */
+}
+
 .input-group label {
   display: block; 
   font-weight: bold;
@@ -316,6 +324,28 @@ button:hover {
   margin-top: 15px;
   font-size: 14px;
   color: green;
+}
+
+
+/* ==== ALERT ==== */
+.alert-box {
+    position: fixed;
+    top: -60px; /* fora da tela inicialmente */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4BB543; /* verde de sucesso */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: top 0.5s ease;
+    text-align: center;
+}
+
+.alert-box.show {
+    top: 20px; /* posição visível */
 }
 
 

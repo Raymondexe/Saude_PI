@@ -45,9 +45,7 @@
             <img class="ImgLogo" src="Img/bemEstar.webp" alt="Logo Bem Estar 360">
         </div>
 
-        <button class="menu-toggle" aria-label="Abrir menu">
-            ☰
-        </button>
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
         <nav class="Navegacao">
             <ul>
@@ -55,12 +53,13 @@
                 <li><a href="./monitoramento.html" data-lang="monitoring">Monitoramento</a></li>
                 <li><a href="#" data-lang="services">Serviços</a></li>
                 <li><a href="#" data-lang="about">Quem somos</a></li>
-                <li><a href="./login.html">Login</a>
+                <li><a href="./login.html">Login</a></li>
 
-                    <!-- Menu Configurações -->
+                <!-- Menu de Configurações -->
                 <li class="config-menu">
-                    <button id="config-btn">⚙️</button>
-                    <div class="dropdown">
+                    <button id="config-btn" aria-haspopup="true" aria-expanded="false">⚙️</button>
+
+                    <div class="dropdown" role="menu">
                         <button id="toggle-theme">🌙 Modo Escuro</button>
                         <button id="change-lang">🌎 Trocar Idioma</button>
                         <button id="accessibility">♿ Acessibilidade</button>
@@ -109,22 +108,19 @@
     </section>
 
     <section class="ContainerBoas">
-        <div class="TextoBoas">
+        <div class="TextoBoas animate-fade-in">
             <h1 data-lang="title">Bem-vindo ao Bem-Estar 360!</h1>
-            <p data-lang="text1"> O Bem-Estar 360 foi desenvolvido para oferecer um acompanhamento completo da sua
-                saúde. Aqui, você
-                poderá
-                registrar diariamente seus níveis de glicemia, pressão arterial, batimentos cardíacos e temperatura,
-                permitindo um monitoramento detalhado do seu estado físico.</p>
-            <p data-lang="text2"> Além do controle diário, nosso portal oferece conteúdos educativos sobre saúde e
-                bem-estar, ajudando
-                você
-                a compreender melhor seu corpo e adotar hábitos mais saudáveis.</p>
-            <p data-lang="text3"> Recomendamos realizar os registros de forma consistente para que os profissionais de
-                saúde possam
-                analisar seu histórico com precisão, proporcionando orientações mais assertivas e personalizadas.</p>
+            <p data-lang="text1">O Bem-Estar 360 foi desenvolvido para oferecer um acompanhamento completo da sua
+                saúde. Aqui, você poderá registrar diariamente seus níveis de glicemia, pressão arterial, batimentos
+                cardíacos e temperatura, permitindo um monitoramento detalhado do seu estado físico.</p>
+            <p data-lang="text2">Além do controle diário, nosso portal oferece conteúdos educativos sobre saúde e
+                bem-estar, ajudando você a compreender melhor seu corpo e adotar hábitos mais saudáveis.</p>
+            <p data-lang="text3">Recomendamos realizar os registros de forma consistente para que os profissionais
+                de saúde possam analisar seu histórico com precisão, proporcionando orientações mais assertivas e
+                personalizadas.</p>
         </div>
     </section>
+
 
 
     <section class="ContainerControle">

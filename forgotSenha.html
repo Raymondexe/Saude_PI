@@ -11,6 +11,9 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
 </head>
 
 <body>
@@ -46,7 +49,7 @@
     <main class="forgot-main">
         <div class="forgot-container">
             <h1>Recuperar Senha</h1>
-            <p>Informe seu e-mail para redefinir sua senha</p>
+            <p>Informe seu e-mail para receber um código de confirmação para redefinir sua senha.</p>
 
             <form id="forgotForm">
                 <!-- Email -->
@@ -55,23 +58,10 @@
                     <input type="email" id="email" placeholder="seu@email.com" required>
                 </div>
 
-                <!-- Pergunta Responsável -->
-                <div class="input-group"> 
-                    <label>Você é responsável?</label>
-                    
-                    <div class="radio-group">
-                        <br>
-                        <label>
-                            <input type="radio" name="responsavel" value="sim" required> Sim
-                        </label>
-                        <label>
-                            <input type="radio" name="responsavel" value="nao" required> Não
-                        </label>
-                    </div>
-                </div>
-
                 <!-- Botão -->
-                <button type="submit">Enviar</button>
+                <form method="POST">
+                    <button type="submit" formaction="./recebimentoCodigo.html">Enviar</button>
+                </form>
             </form>
 
             <p class="back-login"><a href="login.html">Voltar ao login</a></p>

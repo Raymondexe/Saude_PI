@@ -1,7 +1,6 @@
-/* BEGIN DARK/LIGHT MODE*/
+/* ==== TOGGLE THEME ==== */
 const toggleTheme = document.getElementById("toggle-theme");
 
-// Função para definir tema
 function setTheme(theme) {
   if (theme === "dark") {
     document.body.classList.add("dark-mode");
@@ -13,32 +12,53 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
 }
 
-// Carregar preferência salva
-const savedTheme = localStorage.getItem("theme") || "light";
-setTheme(savedTheme);
+// Carregar tema salvo
+setTheme(localStorage.getItem("theme") || "light");
 
-// Alternar tema ao clicar
+// Alternar tema
 toggleTheme.addEventListener("click", () => {
-  const currentTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
-  setTheme(currentTheme === "dark" ? "light" : "dark");
+  const isDark = document.body.classList.contains("dark-mode");
+  setTheme(isDark ? "light" : "dark");
 });
 
-
+/* ==== DROPDOWN MENU ==== */
+/* ==== DROPDOWN PRINCIPAL ==== */
 const configBtn = document.getElementById("config-btn");
 const dropdown = document.querySelector(".config-menu .dropdown");
+const accessibilityToggle = document.getElementById("accessibility");
+const subDropdown = document.querySelector(".submenu .sub-dropdown");
 
-// Alternar visibilidade do menu ao clicar na engrenagem
-configBtn.addEventListener("click", () => {
-  dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+configBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const isOpen = dropdown.style.display === "flex";
+  dropdown.style.display = isOpen ? "none" : "flex";
   dropdown.style.flexDirection = "column";
+  subDropdown.style.display = "none";
+  accessibilityToggle.setAttribute("aria-expanded", "false");
 });
 
-// Fechar dropdown ao clicar fora
+accessibilityToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const isOpen = subDropdown.style.display === "flex";
+  subDropdown.style.display = isOpen ? "none" : "flex";
+  accessibilityToggle.setAttribute("aria-expanded", !isOpen);
+});
+
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".config-menu")) {
     dropdown.style.display = "none";
+    subDropdown.style.display = "none";
+    configBtn.setAttribute("aria-expanded", "false");
+    accessibilityToggle.setAttribute("aria-expanded", "false");
   }
 });
+
+
+
+
+
+
+
 
 /* END DARK/LIGHT MODE*/
 
