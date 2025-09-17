@@ -118,6 +118,10 @@ body.dark-mode {
     color: #eee;
 }
 
+body.dark-mode .menu-toggle {
+    color: #fff; /* Deixa o texto/branco */
+}
+
 /* ==== LOGIN ==== */
 body.dark-mode .login-box {
     background-color: #1e1e1e;

@@ -152,6 +152,10 @@ body.dark-mode {
     color: #f5f5f5;
 }
 
+body.dark-mode .menu-toggle {
+    color: #fff; /* Deixa o texto/branco */
+}
+
 /* Cards padrão */
 .grid-cards .card h2 {
     color: #000;
@@ -361,8 +365,6 @@ body.dark-mode .paragrafoS {
     margin-bottom: 15px;
     text-align: center;
 }
-
-/* ==== END Container Registro ==== */
 
 
 
@@ -587,6 +589,191 @@ body.dark-mode .paragrafoS {
 
 
 /* END LOGIN PAGE*/
+
+
+/* BEGIN LOCALIZATION */
+
+/* ===== Seção UBS ===== */
+.ubs-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+.ubs-section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1565c0;
+    position: relative;
+}
+
+.ubs-section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== Slider Horizontal ===== */
+.ubs-slider {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.ubs-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== Card Dinâmico ===== */
+.ubs-card {
+    flex: 0 0 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.ubs-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Imagem com efeito ===== */
+.ubs-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.ubs-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ubs-card:hover .ubs-image {
+    transform: scale(1.1) rotate(1deg);
+}
+
+/* ===== Conteúdo do Card ===== */
+.ubs-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ubs-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1565c0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.ubs-description {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* ===== Botão Interativo ===== */
+.ubs-button {
+    align-self: center;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.ubs-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+    background: linear-gradient(135deg, #0056b3, #009ad6);
+}
+
+/* ===== Scrollbar Personalizada ===== */
+.ubs-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.ubs-slider::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.ubs-slider::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode .ubs-section {
+    background-color: #121212;
+}
+
+body.dark-mode .ubs-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .ubs-name {
+    color: #00c6ff;
+}
+
+body.dark-mode .ubs-description {
+    color: #ccc;
+}
+
+body.dark-mode .ubs-button {
+    background: linear-gradient(135deg, #2185f8, #5ac8fa);
+    color: #fff;
+}
+
+body.dark-mode .ubs-slider::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+
+body.dark-mode .ubs-slider::-webkit-scrollbar-track {
+    background-color: #2a2a2a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

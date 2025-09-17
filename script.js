@@ -22,19 +22,35 @@ toggleTheme.addEventListener("click", () => {
 });
 
 /* ==== DROPDOWN MENU ==== */
+
+
 /* ==== DROPDOWN PRINCIPAL ==== */
 const configBtn = document.getElementById("config-btn");
 const dropdown = document.querySelector(".config-menu .dropdown");
 const accessibilityToggle = document.getElementById("accessibility");
 const subDropdown = document.querySelector(".submenu .sub-dropdown");
 
+
 configBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   const isOpen = dropdown.style.display === "flex";
   dropdown.style.display = isOpen ? "none" : "flex";
   dropdown.style.flexDirection = "column";
-  subDropdown.style.display = "none";
-  accessibilityToggle.setAttribute("aria-expanded", "false");
+
+  // Só mexe no subDropdown se ele existir
+  if (subDropdown) {
+    subDropdown.style.display = "none";
+    accessibilityToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".config-menu")) {
+    dropdown.style.display = "none";
+    if (subDropdown) subDropdown.style.display = "none";
+    configBtn.setAttribute("aria-expanded", "false");
+    if (accessibilityToggle) accessibilityToggle.setAttribute("aria-expanded", "false");
+  }
 });
 
 accessibilityToggle.addEventListener("click", (e) => {

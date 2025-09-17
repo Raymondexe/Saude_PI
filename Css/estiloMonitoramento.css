@@ -75,41 +75,6 @@ body {
     color: #2185f8;
 }
 
-/* Dropdown */
-.config-menu .dropdown {
-    display: none;
-    position: absolute;
-    top: 120%;
-    right: 0;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    min-width: 200px;
-    padding: 8px 0;
-    flex-direction: column;
-    z-index: 1001;
-}
-
-/* Botões do dropdown */
-.config-menu .dropdown button {
-    background: none;
-    border: none;
-    text-align: left;
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 15px;
-    cursor: pointer;
-    color: #000;
-    transition: background 0.2s;
-}
-
-.config-menu .dropdown button:hover {
-    background: #eef4ff;
-    color: #2185f8;
-    font-weight: bold;
-}
-
-
 /* ==== Menu de Configurações ==== */
 .config-menu {
     position: relative;
@@ -122,20 +87,20 @@ body {
     cursor: pointer;
     padding: 10px;
     color: #000000;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .config-menu button:hover {
     color: #2185f8;
 }
 
-/* Dropdown */
+/* ==== Dropdown principal ==== */
 .config-menu .dropdown {
     display: none;
     position: absolute;
     top: 120%;
     right: 0;
-    background: white;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     min-width: 200px;
@@ -154,7 +119,7 @@ body {
     font-size: 15px;
     cursor: pointer;
     color: #000000;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
 .config-menu .dropdown button:hover {
@@ -163,7 +128,9 @@ body {
     font-weight: bold;
 }
 
-/* Animação suave para o dropdown */
+
+
+/* ==== Animações ==== */
 @keyframes fadeDown {
     from {
         opacity: 0;
@@ -176,10 +143,16 @@ body {
     }
 }
 
+
+
 /* Modo escuro */
 body.dark-mode {
     background-color: #121212;
     color: #eee;
+}
+
+body.dark-mode .menu-toggle {
+    color: #fff; /* Deixa o texto/branco */
 }
 
 body.dark-mode .grid-cards .card {
@@ -369,6 +342,19 @@ body.dark-mode .paragrafoS {
     background: #0c57b3;
     transform: scale(1.05);
 }
+
+
+/* Animação de contagem */
+@keyframes countUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+#batimentos.animate {
+  animation: countUp 0.5s ease forwards;
+}
+
+
 
 
 /* ==== START Footer ==== */

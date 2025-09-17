@@ -13,22 +13,17 @@
     <link rel="stylesheet" href="./Css/estiloMonitoramento.css">
 
     <script src="script.js"></script>
-    <script src="./scriptGerarPdf.JS"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 
 <body>
-    <!-- Header -->
+     <!-- Header -->
     <header class="TopoSite">
         <div class="Logo">
             <img class="ImgLogo" src="Img/bemEstar.webp" alt="Logo Bem Estar 360">
         </div>
 
-        <button class="menu-toggle" aria-label="Abrir menu">
-            ☰
-        </button>
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
         <nav class="Navegacao">
             <ul>
@@ -36,12 +31,13 @@
                 <li><a href="./monitoramento.html" data-lang="monitoring">Monitoramento</a></li>
                 <li><a href="#" data-lang="services">Serviços</a></li>
                 <li><a href="#" data-lang="about">Quem somos</a></li>
-                <li><a href="./login.html">Login</a>
+                <li><a href="./login.html">Login</a></li>
 
-                    <!-- Menu Configurações -->
+                <!-- Menu de Configurações -->
                 <li class="config-menu">
-                    <button id="config-btn">⚙️</button>
-                    <div class="dropdown">
+                    <button id="config-btn" aria-haspopup="true" aria-expanded="false">⚙️</button>
+
+                    <div class="dropdown" role="menu">
                         <button id="toggle-theme">🌙 Modo Escuro</button>
                         <button id="change-lang">🌎 Trocar Idioma</button>
                         <button id="accessibility">♿ Acessibilidade</button>
@@ -51,7 +47,11 @@
         </nav>
     </header>
 
+
+
     
+
+
 
     <!-- Conteúdo principal -->
     <main class="conteudo">
@@ -78,6 +78,7 @@
                     <p id="pressao">-- mmHg</p>
                 </div>
             </div>
+            <script src="./script_Registro/scriptMonitoramentoBatimentos.js"></script>
         </section>
 
         <!-- Histórico -->
@@ -103,6 +104,7 @@
             <br><br>
             <button class="btn-pdf" onclick="gerarPDF()">📄 Exportar PDF</button>
         </section>
+
     </main>
 
     <!-- Footer -->

@@ -188,6 +188,10 @@ body.dark-mode {
     transition: all 0.3s ease;
 }
 
+body.dark-mode .menu-toggle {
+    color: #fff; /* Deixa o texto/branco */
+}
+
 /* Links */
 body.dark-mode a {
     color: #82cfff;
