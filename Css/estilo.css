@@ -153,7 +153,8 @@ body.dark-mode {
 }
 
 body.dark-mode .menu-toggle {
-    color: #fff; /* Deixa o texto/branco */
+    color: #fff;
+    /* Deixa o texto/branco */
 }
 
 /* Cards padrão */
@@ -250,7 +251,46 @@ body.dark-mode .paragrafoS {
     background-color: rgba(135, 233, 159, 0.6);
 }
 
+/* ===== Seção de boas-vindas DARK MODE ===== */
+body.dark-mode .welcome-section {
+  background: #121212; /* fundo escuro suave */
+  color: #eee;
+}
 
+/* Wrapper flexível */
+body.dark-mode .welcome-wrapper {
+  z-index: 2;
+  position: relative;
+}
+
+/* Texto principal */
+body.dark-mode .welcome-text h1 {
+  color: #fff;
+}
+
+body.dark-mode .welcome-text h1 span {
+  color: #4b79a1; /* mantém destaque elegante */
+}
+
+body.dark-mode .welcome-text p {
+  color: #ccc;
+}
+
+/* Ilustração animada */
+body.dark-mode .welcome-illustration img {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* Ondas suaves de fundo */
+body.dark-mode .wave {
+  background: rgba(75, 121, 161, 0.1); /* aumenta contraste no dark mode */
+}
+
+body.dark-mode .wave1 { top: -50%; left: -50%; }
+body.dark-mode .wave2 { top: -60%; left: -40%; animation-duration: 20s; }
+body.dark-mode .wave3 { top: -70%; left: -30%; animation-duration: 25s; }
+
+/* Animação de entrada e flutuação permanecem as mesmas */
 
 
 /* ==== START Carrossel ==== */
@@ -266,69 +306,128 @@ body.dark-mode .paragrafoS {
 /* ==== START Boas-Vindas ==== */
 
 
-/* ===== Container da Seção ===== */
-.ContainerBoas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-   
-    min-height: 80vh; 
-    box-sizing: border-box;
+/* ===== Seção de boas-vindas ===== */
+.welcome-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px;
+  background: #f7f9fc; /* fundo claro e suave */
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Card de texto */
-.TextoBoas {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    padding: 40px 30px;
-    background: linear-gradient(135deg, #4b79a1, #283e51);
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    color: #fff;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-sizing: border-box;
+/* Wrapper flexível */
+.welcome-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
 }
 
-/* Hover dinâmico */
-.TextoBoas:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+/* Texto principal */
+.welcome-text {
+  flex: 1 1 400px;
 }
 
-/* Títulos */
-.TextoBoas h1 {
-    font-size: 3rem;
-    margin-bottom: 25px;
-    font-weight: 800;
-    line-height: 1.2;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+.welcome-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-/* Parágrafos */
-.TextoBoas p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    margin-bottom: 20px;
-    color: #f0f0f0;
+.welcome-text h1 span {
+  color: #4b79a1; /* destaque elegante */
 }
 
-/* Animação de entrada */
+.welcome-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Ilustração animada */
+.welcome-illustration {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-illustration img {
+  max-width: 100%;
+  border-radius: 20px;
+  transform: translateY(0);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ===== Animação de entrada ===== */
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
 }
 
 .animate-fade-in {
-    animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 1s ease forwards;
 }
+
+/* ===== Animação de flutuação da ilustração ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* ===== Ondas suaves de fundo ===== */
+.welcome-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: rgba(26, 98, 161, 0.05); /* cor atual */
+  border-radius: 50%;
+  animation: waveMove 15s infinite linear;
+}
+
+.wave1 { top: -50%; left: -50%; }
+.wave2 { top: -60%; left: -40%; animation-duration: 20s; }
+.wave3 { top: -70%; left: -30%; animation-duration: 25s; }
+
+@keyframes waveMove {
+  0% { transform: translateX(0) rotate(0deg);}
+  100% { transform: translateX(-50%) rotate(360deg);}
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 900px) {
+  .welcome-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  body.dark-mode .welcome-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+
 
 /* ==== END Boas-Vindas ==== */
 
@@ -722,7 +821,7 @@ body.dark-mode .paragrafoS {
 }
 
 .ubs-slider::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
 

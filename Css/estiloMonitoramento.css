@@ -145,6 +145,8 @@ body {
 
 
 
+
+
 /* Modo escuro */
 body.dark-mode {
     background-color: #121212;
@@ -233,7 +235,108 @@ body.dark-mode .paragrafoS {
     background-color: rgba(135, 233, 159, 0.6);
 }
 
+body.dark-mode .cards .card {
+    background-color: #1e1e1e;
+    border: 2px solid #333;
+    color: #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
 
+body.dark-mode .cards .card h3 {
+    color: #fff;
+}
+
+body.dark-mode .cards .card p {
+    color: #ccc;
+}
+
+/* === MODO ESCURO: MONITORAMENTO EM TEMPO REAL === */
+body.dark-mode .monitoramento-container {
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+    color: #eee;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .monitoramento-container h2 {
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+/* Cards do monitoramento (batimentos, glicemia, etc) */
+body.dark-mode .cards .card {
+    background-color: #1e1e1e;
+    border: 2px solid #333;
+    color: #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .cards .card h3 {
+    color: #fff;
+}
+
+body.dark-mode .cards .card p {
+    color: #ccc;
+}
+
+body.dark-mode .cards .card:hover {
+    background-color: #252525;
+    transform: scale(1.02);
+}
+
+
+/* === MODO ESCURO: HISTÓRICO DE MONITORAMENTO === */
+body.dark-mode .historico-container {
+    background: #1a1a1a;
+    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.05);
+    color: #eee;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .historico-container h2 {
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+body.dark-mode .tabela-wrapper {
+    border: 1px solid #333;
+}
+
+body.dark-mode #tabelaHistorico th {
+    background: #0a4fa3;
+    color: #fff;
+}
+
+body.dark-mode #tabelaHistorico td {
+    border-bottom: 1px solid #333;
+    color: #ddd;
+}
+
+body.dark-mode #tabelaHistorico tr:nth-child(even) {
+    background: #2a2a2a;
+}
+
+body.dark-mode #tabelaHistorico tr:hover {
+    background: #333;
+}
+
+body.dark-mode .btn-pdf {
+    background: #0a4fa3;
+    color: #fff;
+}
+
+body.dark-mode .btn-pdf:hover {
+    background: #083b7d;
+}
 
 
 /* Layout dos Cards */
@@ -353,7 +456,6 @@ body.dark-mode .paragrafoS {
 #batimentos.animate {
   animation: countUp 0.5s ease forwards;
 }
-
 
 
 
